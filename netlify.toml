@@ -4,11 +4,23 @@
   functions = "netlify/functions"
   publish = "dist"
 
-[[plugins]] 
+[[plugins]]
   package = "netlify-plugin-cypress"
 
   [plugins.inputs.postBuild]
     enable = true
-  
+
   [plugin.inputs]
     enable = false
+
+[[redirects]]
+  from = "/class"
+  to = "https://microsoft.com"
+  status = 307
+  force = true
+
+[[redirects]]
+  from = "/kickoff"
+  to = "https://apple.com"
+  status = 307
+  force = true
